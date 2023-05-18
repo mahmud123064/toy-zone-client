@@ -11,7 +11,7 @@ const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     return (
         // sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-28 lg:px-28
-        <div className='md:bg-gray-300 py-5 '>
+        <div className='md:bg-gray-300 py-5 mb-6 mt-8'>
         <div className='relative flex items-center justify-between px-auto '>
             {/* Logo Section */}
             <Link to='/' className='inline-flex items-center'>
