@@ -8,7 +8,7 @@ const Banner = () => {
                 <div className="max-w-md text-white  absolute rounded-xl flex items-center h-full left-16 ml-0 top-28  ">
                     <div className="space-y-7  pl-20">
                         <h1 className="mb-5 text-5xl font-bold">Welcome to Toy Truck Zone</h1>
-                        <p className="mb-8 ">A toy truck website is an online platform dedicated to offering a wide range of toy trucks for children and truck enthusiasts alike. These websites typically provide a diverse selection of toy trucks, including various brands, models, and sizes to cater to different preferences and age groups.</p>
+                        <p className="mb-8 ">A toy truck website is an online platform dedicated to offering a wide range of toy trucks for children and truck enthusiasts alike. </p>
                         <Link to="/"><button className="btn btn-active btn-secondary mt-10 px-12">All Toy</button></Link>
                     </div>
                 </div>

@@ -1,147 +1,52 @@
-import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
-import {
-    BoltIcon,
-    Bars3BottomRightIcon,
-    XMarkIcon,
-} from '@heroicons/react/24/solid';
+
 import logo from "../../../public/main _logo.png"
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
     return (
-        // sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-28 lg:px-28
-        <div className='md:bg-gray-300 py-5 mb-6 mt-8'>
-        <div className='relative flex items-center justify-between px-auto '>
-            {/* Logo Section */}
-            <Link to='/' className='inline-flex items-center'>
-                <span className='ml-2 text-xl font-bold tracking-wide text-purple-800'>
-                   <img className='w-24' src = {logo} alt="" />
-                </span>
-            </Link>
-
-            {/* Nav Items Section */}
-            <ul className='items-center hidden space-x-8 lg:flex'>
-                <li>
-                    <NavLink
-                        to='/'
-                        className={({ isActive }) => (isActive ? 'active' : 'default')}
-                    >
-                        Home
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to='/statistics'
-                        className={({ isActive }) => (isActive ? 'active' : 'default')}
-                    >
-                        Statistics
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to='/jobs'
-                        className={({ isActive }) => (isActive ? 'active' : 'default')}
-                    >
-                        Applied Jobs
-                    </NavLink>
-                </li>
-                <li>
-                    <NavLink
-                        to='/blog'
-                        className={({ isActive }) => (isActive ? 'active' : 'default')}
-                    >
-                        Blog
-                    </NavLink>
-                </li>
-            </ul>
-            <div>
-                <button className=' hidden md:block xl:block bg-blue-400 rounded p-3 text-white hover:bg-blue-600 font-bold'>Start Applying</button>
+        <div className="navbar bg-base-100">
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><Link>Home</Link></li>
+                        <li><Link>All Toys</Link></li>
+                        <li><Link>My Toys</Link></li>
+                        <li><Link>Add A Toy</Link></li>
+                        <li><Link>Blogs</Link></li>
+                        {/* <li tabIndex={0}>
+                    
+                    <ul className="p-2">
+                    <li><a>Submenu 1</a></li>
+                    <li><a>Submenu 2</a></li>
+                    </ul>
+                </li> */}
+                        <li><a>Item 3</a></li>
+                    </ul>
+                </div>
+                
+                {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
+                <Link to ='/'><img className="w-20" src ={logo} alt="" /></Link>
             </div>
-
-            {/* Mobile Navbar Section */}
-            <div className='lg:hidden'>
-                {/* Dropdown Open Button */}
-                <button
-                    aria-label='Open Menu'
-                    title='Open Menu'
-                    onClick={() => setIsMenuOpen(true)}
-                >
-                    <Bars3BottomRightIcon className='w-5 text-gray-600' />
-                </button>
-                {isMenuOpen && (
-                    <div className='absolute top-0 left-0 w-full z-10'>
-                        <div className='p-5 bg-white border rounded shadow-sm'>
-                            {/* Logo & Button section */}
-                            <div className='flex items-center justify-between mb-4'>
-                                <div>
-                                    <Link to='/' className='inline-flex items-center'>
-                                        <BoltIcon className='h-6 w-6 text-blue-500' />
-                                        <span className='ml-2 text-xl font-bold tracking-wide text-purple-800 uppercase'>
-                                            devJobs
-                                        </span>
-                                    </Link>
-                                </div>
-                                {/* Dropdown menu close button */}
-                                <div>
-                                    <button
-                                        aria-label='Close Menu'
-                                        title='Close Menu'
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        <XMarkIcon className='w-5 text-gray-600' />
-                                    </button>
-                                </div>
-                            </div>
-                            {/* Mobile Nav Items Section */}
-                            <nav>
-                                <ul className='space-y-4'>
-                                    <li>
-                                        <Link to='/' className='default'>
-                                            Home
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link>
-                                            <button></button>
-                                        </Link>
-                                    </li>
-
-                                    <li>
-                                        <Link
-                                            to='/statistics'
-                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                                        >
-                                            Statistics
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to='/jobs'
-                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                                        >
-                                            Applied Jobs
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link
-                                            to='/blog'
-                                            className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-blue-400'
-                                        >
-                                            Blog
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </nav>
-                            <button className='btn'>Star Applying</button>
-                        </div>
-                    </div>
-                )}
+            <div className="navbar-center hidden lg:flex">
+                <ul className="menu menu-horizontal px-1">
+                    <li><Link>Home</Link></li>
+                    <li><Link>All Toys</Link></li>
+                    <li><Link>My Toys</Link></li>
+                    <li><Link>Add A Toy</Link></li>
+                    <li><Link>Blogs</Link></li>
+                </ul>
+            </div>
+            <div className="navbar-end ">
+            <img className="rounded me-3" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                <Link><button className="btn btn-warning me-3">Log Out</button></Link>
+                <Link><button className="btn btn-warning">Login</button></Link>
             </div>
         </div>
-
-    </div>
     );
 };
 
