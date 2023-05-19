@@ -20,13 +20,13 @@ const AuthProvider = ({ children }) => {
         return signInWithEmailAndPassword(auth, email, password);
     }
 
-    useEffect( ()=>{
-       const unsubscribe = onAuthStateChanged(auth,user => {
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, user => {
             setUser(user)
             console.log('current user', user);
             setLoading(false)
         })
-        return () => { 
+        return () => {
             return unsubscribe();
         }
     }, [])

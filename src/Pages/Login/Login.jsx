@@ -7,11 +7,11 @@ import app from "../../firebase/firebase.config";
 
 const Login = () => {
 
-    const Provider = new GoogleAuthProvider();
+    const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
 
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, Provider)
+        signInWithPopup(auth, provider)
 
         .then(result => {
             const user = result.user;
