@@ -7,7 +7,7 @@ import img6 from '../../../public/truck-6.png'
 import { Link } from 'react-router-dom'
 const Gallery = () => {
     return (
-        <div>
+        <div className='mb-12'>
             <h2 className="text-center font-bold text-5xl ">Toy Gallery</h2>
             {/* ///////////// */}
             <div className='mt-12 grid grid-cols-1 md:grid-cols-3 gap-5'>

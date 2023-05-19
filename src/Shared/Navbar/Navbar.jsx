@@ -18,18 +18,9 @@ const Navbar = () => {
                         <li><Link>My Toys</Link></li>
                         <li><Link>Add A Toy</Link></li>
                         <li><Link>Blogs</Link></li>
-                        {/* <li tabIndex={0}>
-                    
-                    <ul className="p-2">
-                    <li><a>Submenu 1</a></li>
-                    <li><a>Submenu 2</a></li>
-                    </ul>
-                </li> */}
-                        <li><a>Item 3</a></li>
                     </ul>
                 </div>
-                
-                {/* <a className="btn btn-ghost normal-case text-xl">daisyUI</a> */}
+    
                 <Link to ='/'><img className="w-20" src ={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
@@ -43,8 +34,8 @@ const Navbar = () => {
             </div>
             <div className="navbar-end ">
             <img className="rounded me-3" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                <Link><button className="btn btn-warning me-3">Log Out</button></Link>
-                <Link><button className="btn btn-warning">Login</button></Link>
+                <Link ><button className="btn btn-warning me-3">Log Out</button></Link>
+                <Link to = '/login'><button className="btn btn-warning">Login</button></Link>
             </div>
         </div>
     );
