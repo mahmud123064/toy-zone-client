@@ -9,7 +9,7 @@ const Banner = () => {
                         <div className="space-y-7 pl-20 ">
                             <h1 className="mb-5 text-5xl font-bold">Welcome to Toy Truck Zone</h1>
                             <p className="mb-8 ">A toy truck website is an online platform dedicated to offering a wide range of toy trucks for children and truck enthusiasts alike. </p>
-                            <Link to="/"><button className="btn btn-active btn-secondary mt-10 px-12">All Toy</button></Link>
+                            <Link to="/alltoys"><button className="btn btn-active btn-secondary mt-10 px-12">All Toy</button></Link>
                         </div>
                     </div>
 

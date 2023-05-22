@@ -16,6 +16,7 @@ const Gallery = () => {
                         <img src={img1} alt="Shoes" className="rounded-xl h-60" />
                     </figure>
                     <div className="card-body items-center text-center mb-0">
+                      
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
                            <Link to = "https://brudertoyshop.com/collections/commercial"> <button className="btn btn-primary">Buy Now</button></Link>
@@ -46,6 +47,7 @@ const Gallery = () => {
                         <img src={img3} alt="Shoes" className="rounded-xl  h-60" />
                     </figure>
                     <div className="card-body items-center text-center">
+                    
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
                             <button className="btn btn-primary">Buy Now</button>
@@ -91,6 +93,7 @@ const Gallery = () => {
                         <img src={img6} alt="Shoes" className="rounded-xl  h-60" />
                     </figure>
                     <div className="card-body items-center text-center">
+                        
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
                             <button className="btn btn-primary">Buy Now</button>

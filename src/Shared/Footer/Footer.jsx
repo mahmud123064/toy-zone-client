@@ -6,9 +6,9 @@ const Footer = () => {
             <footer className="footer p-10 bg-neutral text-neutral-content md:center">
                 <div>
                     <Link to = '/'>
-                    <img src = {logo} alt="" />
+                    <img className='w-24' src = {logo} alt="" />
                     </Link>
-                    <p>Mahmud Industries Ltd.<br />Providing reliable tech since 1992</p>
+                    <p>Toy Truck Industries Ltd.<br />Providing reliable service since 1992</p>
                 </div>
                 <div>
                     <span className="footer-title">Services</span>

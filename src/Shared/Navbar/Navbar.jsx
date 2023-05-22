@@ -1,9 +1,23 @@
 
+import { useContext } from "react";
 import logo from "../../../public/main _logo.png"
 
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleBtnLogOut = () => {
+        logOut()
+            .then(result => {
+                alert("Successfully logout", result)
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
 
     return (
         <div className="navbar bg-base-100">
@@ -14,28 +28,35 @@ const Navbar = () => {
                     </label>
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <li><Link>Home</Link></li>
-                        <li><Link>All Toys</Link></li>
-                        <li><Link>My Toys</Link></li>
-                        <li><Link>Add A Toy</Link></li>
-                        <li><Link to = '/blog'>Blogs</Link></li>
+                        <li><Link to = "/alltoys">All Toys</Link></li>
+                        <li><Link >My Toys</Link></li>
+                        <li><Link to = '/addatoy'>Add A Toy</Link></li>
+                        <li><Link to='/blog'>Blogs</Link></li>
                     </ul>
                 </div>
-    
-                <Link to ='/'><img className="w-20" src ={logo} alt="" /></Link>
+
+                <Link to='/'><img className="w-20" src={logo} alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link>Home</Link></li>
-                    <li><Link>All Toys</Link></li>
-                    <li><Link>My Toys</Link></li>
-                    <li><Link>Add A Toy</Link></li>
-                    <li><Link to = "/blog">Blogs</Link></li>
+                    <li><Link to = "/alltoys">All Toys</Link></li>
+                    <li><Link >My Toys</Link></li>
+                    <li><Link to = '/addatoy'>Add A Toy</Link></li>
+                    <li><Link to="/blog">Blogs</Link></li>
                 </ul>
             </div>
             <div className="navbar-end ">
-            <img className="rounded me-3" src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                <Link ><button className="btn btn-warning me-3">Log Out</button></Link>
-                <Link to = '/login'><button className="btn btn-warning">Login</button></Link>
+                {user ? <>
+                    <img className="rounded-full w-12 me-3" src={user?.photoURL
+                    } />
+                    <Link ><button onClick={handleBtnLogOut} className="btn btn-warning me-3">Log Out</button></Link>
+                </> :
+                    <Link to='/login'><button className="btn btn-warning">Login</button></Link>
+                }
+
+
+
             </div>
         </div>
     );
