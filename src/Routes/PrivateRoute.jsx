@@ -9,15 +9,15 @@ const PrivateRoute = ({ children }) => {
 
     if (loading) {
         return <div className="text-center">
-            {/* <progress className="progress progress-success w-56" value="0" max="100"></progress> <br />
-            <progress className="progress progress-success w-56" value="10" max="100"></progress> */}
+            <progress className="progress progress-success w-56" value="0" max="100"></progress> <br />
+            <progress className="progress progress-success w-56" value="10" max="100"></progress>
            
         </div>
     }
 
-    if (user) {
-        return children;
-    }
+    // if (user) {
+    //     return children;
+    // }
 
     // return <Navigate to = '/login' replace></Navigate>
 
