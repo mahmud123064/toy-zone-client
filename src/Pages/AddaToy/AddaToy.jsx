@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+// import { useLoaderData } from 'react-router-dom';
 
 const AddaToy = () => {
 
@@ -31,11 +31,11 @@ const AddaToy = () => {
             rating,
             available_quantity,
             description,
-            // toys: _id,
+          
         }
         console.log(addProduct);
 
-        fetch('http://localhost:5000/addatoy',{
+        fetch('https://toy-truck-server.vercel.app/addatoy',{
             method: "POST",
             headers: {
                 "content-type":"application/json"
@@ -125,9 +125,7 @@ const AddaToy = () => {
                     <input className='btn btn-primary btn-block' type="submit" value="Add Products" />
                 </div>
             </form>
-            <div className="card-body">
-
-            </div>
+           
         </div>
 
     );

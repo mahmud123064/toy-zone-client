@@ -9,6 +9,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import PrivateRoute from "./PrivateRoute";
 import AllToysDetails from "../Pages/AllToysDetails/AllToysDetails";
 import AddaToy from "../Pages/AddaToy/AddaToy";
+import MyToy from "../Pages/MyToy/MyToy";
 
 const router = createBrowserRouter([
     {
@@ -45,13 +46,25 @@ const router = createBrowserRouter([
               <AllToysDetails></AllToysDetails>
             </PrivateRoute>
           ),
-          loader: ({params})=> fetch(`http://localhost:5000/alltoys/${params.id}`)
+          loader: ({params})=> fetch(`https://toy-truck-server.vercel.app/alltoys/${params.id}`)
         },
         {
           // path:'/addatoy/:id'
           path:'/addatoy',
-          element:<AddaToy></AddaToy>,
+          element:(
+            <PrivateRoute>
+              <AddaToy></AddaToy>,
+            </PrivateRoute>
+          )
           // loader: ({params})=> fetch(`http://localhost:5000/alltoys/${params.id}`)
+        },
+        {
+          path:'/mytoy',
+          element:(
+            <PrivateRoute>
+              <MyToy></MyToy>
+            </PrivateRoute>
+          )
         }
       ]
     },

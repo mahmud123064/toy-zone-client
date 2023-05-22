@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGoogle } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -7,6 +7,9 @@ import app from "../../firebase/firebase.config";
 
 const Login = () => {
 
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from =location?.state?.from?.pathname ||'/login'  
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
 
@@ -15,6 +18,7 @@ const Login = () => {
 
         .then(result => {
             const user = result.user;
+            navigate(from,{replace:true})          
             console.log(user);
         })
         .catch(error => {
@@ -35,6 +39,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
+                navigate(from,{replace:true})  
                 console.log(user);
             })
             .catch(error => {
@@ -83,7 +88,7 @@ const Login = () => {
                                 <hr />
                             </div>
                         </div>
-                        <Link onClick={handleGoogleSignIn} className="mx-auto"><button className="btn btn-primary">< FaGoogle></FaGoogle></button></Link>
+                        <Link onClick={handleGoogleSignIn} className="mx-auto"><button className="btn btn-primary">< FaGoogle></FaGoogle>OOGLE</button></Link>
                     </div>
                 </div>
             </div>
