@@ -16,20 +16,20 @@ const AddaToy = () => {
         const toy_name = form.toy_name.value;
         const seller_name = user?.displayName;
         const sellerEmail = user?.email;
-        const subCategory = form.subCategory.value;
+        const sub_category = form.sub_category.value;
         const price = form.price.value;
         const rating = form.rating.value;
-        const availableQuantity = form.availableQuantity.value;
+        const available_quantity = form.available_quantity.value;
         const description = form.description.value;
         const addProduct = {
             image_url,
             toy_name,
             seller_name,
             sellerEmail,
-            subCategory,
+            sub_category,
             price,
             rating,
-            availableQuantity,
+            available_quantity,
             description,
             // toys: _id,
         }
@@ -88,7 +88,7 @@ const AddaToy = () => {
                         <label className="label">
                             <span className="label-text">Sub Category</span>
                         </label>
-                        <input type="text" name='subCategory' placeholder="Sub Category" className="input input-bordered" />
+                        <input type="text" name='sub_category' placeholder="Sub Category" className="input input-bordered" />
                     </div>
 
                     <div className="form-control">
@@ -109,7 +109,7 @@ const AddaToy = () => {
                         <label className="label">
                             <span className="label-text">Available Quantity</span>
                         </label>
-                        <input type="text" name='availableQuantity' placeholder="Available Quantity" className="input input-bordered" />
+                        <input type="text" name='available_quantity' placeholder="Available Quantity" className="input input-bordered" />
                     </div>
                 </div>
 
