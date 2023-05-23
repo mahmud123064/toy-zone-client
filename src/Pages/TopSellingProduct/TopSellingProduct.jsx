@@ -9,9 +9,9 @@ const TopSellingProduct = () => {
                 <div className="card card-compact w-96 bg-base-100 shadow-xl p-5 mb-12">
                     <figure><img className="h-60" src = {img5} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
+                        <h2 className="card-title">Toy Truck</h2>
                         <div className="badge badge-secondary">NEW</div>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>If you want a good toy?</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">Buy Now</button>
                         </div>
@@ -20,9 +20,9 @@ const TopSellingProduct = () => {
                 <div className="card card-compact w-96 bg-base-100 shadow-xl p-5 mb-12">
                     <figure><img className="h-60" src = {img2} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
+                        <h2 className="card-title">Toy Truck</h2>
                         <div className="badge badge-secondary">NEW</div>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>If you want a good toy?</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">Buy Now</button>
                         </div>
@@ -31,9 +31,9 @@ const TopSellingProduct = () => {
                 <div className="card card-compact w-96 bg-base-100 shadow-xl p-5 mb-12">
                     <figure><img className="h-60" src = {img3} alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title">Shoes!</h2>
+                        <h2 className="card-title">Toy Truck</h2>
                         <div className="badge badge-secondary">NEW</div>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
+                        <p>If you want a good toy?</p>
                         <div className="card-actions justify-end">
                             <button className="btn btn-primary">Buy Now</button>
                         </div>

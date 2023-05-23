@@ -9,7 +9,8 @@ const Login = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
-    const from =location?.state?.from?.pathname ||'/login'  
+    const from = location?.state?. from?. pathname || '/'  
+
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app);
 
@@ -18,7 +19,7 @@ const Login = () => {
 
         .then(result => {
             const user = result.user;
-            navigate(from,{replace:true})          
+            navigate(from, {replace:true} )          
             console.log(user);
         })
         .catch(error => {
@@ -39,7 +40,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                navigate(from,{replace:true})  
+                navigate(from, {replace:true} )  
                 console.log(user);
             })
             .catch(error => {

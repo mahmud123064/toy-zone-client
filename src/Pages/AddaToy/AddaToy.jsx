@@ -21,6 +21,7 @@ const AddaToy = () => {
         const rating = form.rating.value;
         const available_quantity = form.available_quantity.value;
         const description = form.description.value;
+        form.reset();
         const addProduct = {
             image_url,
             toy_name,

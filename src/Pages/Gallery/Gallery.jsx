@@ -34,7 +34,7 @@ const Gallery = () => {
                     <div className="card-body items-center text-center mb-0">
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to = "https://brudertoyshop.com/collections/commercial"> <button className="btn btn-primary">Buy Now</button></Link>
                         </div>
                     </div>
                 </div>
@@ -50,7 +50,7 @@ const Gallery = () => {
                     
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to = "https://brudertoyshop.com/collections/commercial"> <button className="btn btn-primary">Buy Now</button></Link>
                         </div>
                     </div>
                 </div>
@@ -65,7 +65,7 @@ const Gallery = () => {
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to = "https://brudertoyshop.com/collections/commercial"> <button className="btn btn-primary">Buy Now</button></Link>
                         </div>
                     </div>
                 </div>
@@ -80,7 +80,7 @@ const Gallery = () => {
                     <div className="card-body items-center text-center">
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to = "https://brudertoyshop.com/collections/commercial"> <button className="btn btn-primary">Buy Now</button></Link>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ const Gallery = () => {
                         
                         <h2 className="card-title">Toy Truck</h2>
                         <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                        <Link to = "https://brudertoyshop.com/collections/commercial"> <button className="btn btn-primary">Buy Now</button></Link>
                         </div>
                     </div>
                 </div>
