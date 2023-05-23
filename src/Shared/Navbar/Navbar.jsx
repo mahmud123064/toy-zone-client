@@ -11,12 +11,12 @@ const Navbar = () => {
 
     const handleBtnLogOut = () => {
         logOut()
-            .then(result => {
-                alert("Successfully logout", result)
-            })
-            .catch(error => {
-                console.log(error.message);
-            })
+            // .then(result => {
+            //     alert("Successfully logout", result)
+            // })
+            // .catch(error => {
+            //     console.log(error.message);
+            // })
     }
 
     return (

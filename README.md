@@ -21,4 +21,4 @@ In server side a json file and then it paste to mongodb database
 7. In The Blog route user can see some question and answer
 
 
-LIVE SITE LINK : 
+LIVE SITE LINK : https://toy-truck-7f908.web.app/
