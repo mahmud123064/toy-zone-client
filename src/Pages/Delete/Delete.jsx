@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Swal from "sweetalert2"
 
-const Delete = ({ mytoy, index, }) => {
+const Delete = ({ mytoy, index,setMytoy }) => {
     console.log(mytoy);
 
     const { _id, seller_name, toy_name, price, available_quantity, sub_category } = mytoy;
@@ -22,7 +22,7 @@ const Delete = ({ mytoy, index, }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/alltoyss/${id}`, {
+                fetch(`https://toy-truck-server.vercel.app/alltoyss/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
@@ -30,12 +30,13 @@ const Delete = ({ mytoy, index, }) => {
                         console.log(data);
                         if (data.deletedCount > 0) {
 
-                            const remaining = mytoys.filter(mytoy => mytoy._id !== id )
                             Swal.fire(
                                 'Deleted!',
                                 'Your Toy data has been deleted.',
                                 'success'
-                            )
+                                )
+                                const remaining = mytoys.filter(mytoy => mytoy._id !== id );
+                                setMytoy(remaining)
                         }
                     })
             }
